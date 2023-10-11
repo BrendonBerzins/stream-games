@@ -1,0 +1,6 @@
+.bgImage {
+    background-image: urL('https://i.blogs.es/f818b3/fortnite/1366_2000.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
