@@ -1,6 +1,7 @@
 import { BsPersonFillAdd } from 'react-icons/bs'
 import { RiUserSettingsLine } from 'react-icons/ri'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { useState } from 'react'
 
 export default function Friends(){
     const favoriteFriendsList = [
@@ -42,6 +43,9 @@ export default function Friends(){
             description: 'Not now 😠',
         }
     ]
+    const [search, setSearch] = useState('')
+    const lowerSearch = search.toLowerCase()
+    const namesFilter = friendsList.filter((name) => name.useName.toLowerCase().includes(lowerSearch))
     return(
         <main className="w-full h-screen bg-[#21242d] flex overflow-hidden">
         <section className="h-full w-[70%]"></section>
@@ -62,7 +66,7 @@ export default function Friends(){
             <button className='bg-[#282b32] p-2 rounded-md text-[#b4b6bb] hover:bg-[#1b1e25] transition ease-in-out duration-500'><BsPersonFillAdd /></button>
             <button className='bg-[#282b32] p-2 rounded-md text-[#b4b6bb] hover:bg-[#1b1e25] transition ease-in-out duration-500'><RiUserSettingsLine /></button>
             <div className='flex items-center justify-center p-2 gap-3 bg-[#282b32] rounded-full text-[#b4b6bb]'>
-                <input className='bg-transparent outline-none' type='text' placeholder='Search Friends'/>
+                <input className='bg-transparent outline-none' type='text' placeholder='Search Friends' value={search} onChange={(e)=> setSearch(e.target.value)}/>
                 <AiOutlineSearch />
             </div>
             </section>
@@ -82,8 +86,8 @@ export default function Friends(){
                 <p className='text-[#b4b6bb] ml-3'>Friends - 6/6</p>
                 <section className=''>
                     {
-                        friendsList.map((info) => (
-                            <div className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
+                        namesFilter.map((info, index) => (
+                            <div key={index} className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
                             <img className="rounded-full h-12 w-12" src={info.imageProfile} alt={info.useName}/>
                             <div>
                             <p className="text-[#697c8a] font-bold">{info.useName}</p>

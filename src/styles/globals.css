@@ -27,6 +27,14 @@
     -webkit-box-orient: vertical; 
 }
 
+.text-one-line {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+}
+
 .bg-imageGameDowload {
     background-image: linear-gradient(250deg, rgba(22,25,32,1) 14%, rgba(0,0,0,0) 74%),url('https://playerstation.com.br/wp-content/uploads/2023/07/Resident-Evil-4-Remake-ultrapassa-5-milhoes-de-copias-vendidas.jpg') ;
     background-repeat: no-repeat;

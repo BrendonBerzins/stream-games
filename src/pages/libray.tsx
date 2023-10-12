@@ -29,7 +29,7 @@ export default function Libray(){
         <AiOutlineSearch className='mr-3' />
         </div>
         </div>
-        <section className='flex flex-wrap gap-5'>
+        <section className='flex flex-wrap gap-2 w-full justify-center items-center'>
         {response}
         </section>
         </main>

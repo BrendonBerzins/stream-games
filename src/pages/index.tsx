@@ -1,7 +1,5 @@
 import styles from '@/components/layout/home/Home.module.css'
-import { BsFillCloudArrowDownFill, BsFillStarFill } from 'react-icons/bs'
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import CardGame from '@/components/cardGames/CardGame'
 export default function Home() {
 
@@ -31,14 +29,14 @@ export default function Home() {
     <main className="h-screen w-full">
    <section className="p-10 ">
     <h1 className="text-white text-2xl font-bold mb-10">Popular Games</h1>
-    <section className="flex bg-glass w-[90%] items-center rounded-xl overflow-auto">
-    <img className='w-[610px]' src="https://c4.wallpaperflare.com/wallpaper/1004/347/682/gta-5-4k-download-images-for-pc-wallpaper-preview.jpg"/>
+    <section className="flex bg-glass w-[90%] h-[300px] items-center rounded-xl overflow-hidden">
+    <img className='h-full' src="https://assetsio.reedpopcdn.com/Resi-Review-Site.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"/>
     <section className="flex flex-col justify-center items-center w-full p-5">
-    <h1 className='text-white font-bold text-2xl'>Grand Theft Auto V</h1>
-    <p className='text-[#adacaf] p-5'>Grand Theft Auto V is an action-adventure game played from either
-     a third-person or first-person perspective.
-     Players complete missions linear scenarios with set objectives to progress through the story. 
-     Outside of the missions, players may freely roam the open world.</p>
+    <h1 className='text-white font-bold text-2xl'>Resident Evil 4 remake</h1>
+    <p className='text-[#adacaf] p-5'>Reimagined for 2023 to bring state-of-the-art survival horror.
+    Resident Evil 4 preserves the essence of the original game, while introducing modernized gameplay,
+    a reimagined storyline, and vividly detailed graphics to make this the latest survival 
+    horror game where life and death, terror and catharsis intersect.</p>
      <button className="bg-[#71b620] text-white p-2">Up to -25%</button>
     </section>
     </section>
