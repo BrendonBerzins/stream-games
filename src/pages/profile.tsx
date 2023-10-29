@@ -5,6 +5,7 @@ import { FaFireAlt } from 'react-icons/fa'
 import { useState } from 'react'
 import Head from 'next/head'
 import { games } from '@/components/utils/GamesProfile'
+import Image from 'next/image'
 
 export default function Profile(){
     const [cardInfoGame, setCardInfoGame]:any = useState(
@@ -47,7 +48,7 @@ export default function Profile(){
         <main className="h-full w-full flex flex-col">
             <div className={styles.bgImage}>
                 <div className='flex items-center gap-5 h-[300px]'>
-                    <img className="rounded-full h-36 w-3h-36 ml-3 bg-white p-1 shadow-xl shadow-black" 
+                    <Image className="rounded-full h-36 w-3h-36 ml-3 bg-white p-1 shadow-xl shadow-black" 
                     src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" 
                     alt="profile-icon" />
                         <section className="flex flex-col text-white">
@@ -87,7 +88,7 @@ export default function Profile(){
                     <section className={`flex gap-5 flex-col md:flex-row md:flex-wrap`}>
                         {
                             games.map((game, index) => (
-                                <div onClick= { () => {setCardInfoGame(
+                                <div key={index} onClick= { () => {setCardInfoGame(
                                     <div key={index} className='flex justify-end items-end h-full w-full overflow-hidden'>
                                         <div style={{backgroundImage: `url(${game.bgGame})`, height: '100%', width: '100%',
                                         backgroundSize: 'cover', backgroundPosition: 'center',
@@ -124,7 +125,7 @@ export default function Profile(){
                                     cursor-pointer bg-[#272526] 
                                     hover:border hover:border-cyan-500 transition ease-in hover:-translate-y-5 
                                     shadow-xl shadow-black hover:shadow-cyan-500 hover:shadow-md`}>
-                                        <img className='h-full w-full' src={game.imageGame} />
+                                        <Image alt='' className='h-full w-full' src={game.imageGame} />
                                     </div>
                                     <div className='flex flex-col gap-2 mt-3'>
                                         <h1 className='text-white'>{game.nameGame}</h1>

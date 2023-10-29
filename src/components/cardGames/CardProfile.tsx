@@ -1,13 +1,14 @@
 import { BsPlaystation, BsWindows, BsXbox } from 'react-icons/bs'
 import { IoAddOutline } from 'react-icons/io5'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function CardProfile({id, name, background}:any){
     return(
         <div key={id} className={`w-[250px] h-[300px] rounded-xl overflow-auto bg-[#1b1e25] 
         hover:border hover:border-cyan-500 p-3 transition ease-in scale-[0.9] hover:scale-[1] 
         shadow-xl shadow-black hover:shadow-cyan-500 hover:shadow-md`}>
-            <img key={id} className='rounded-xl h-[55%] w-full' src={`${background}`} />
+            <Image alt='' key={id} className='rounded-xl h-[55%] w-full' src={`${background}`} />
             <h1 key={id} className='font-bold text-white text-one-line'>{name}</h1>
             <div className='flex gap-3 text-[#727071] mt-3'>
               <BsPlaystation />

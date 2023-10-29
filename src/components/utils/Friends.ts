@@ -25,7 +25,7 @@ export const friendsList: Array<FriendsInfo> = [
     {
         imageProfile: 'https://i.pinimg.com/736x/1a/8c/5a/1a8c5adb2405a2e9d4172e8c97d62cc3.jpg',
         useName: 'Jenny',
-        description: '"I just wish I had jumped"',
+        description: 'I just wish I had jumped',
     },
     {
         imageProfile: 'https://wallpapers-clan.com/wp-content/uploads/2023/04/fortnite-style-2-pfp-01.jpg',

@@ -71,10 +71,10 @@ export default function Libray(){
         </div>
         <section className='flex flex-wrap gap-2 w-full justify-center items-center'>
             {option.length > 0 ? option.map((item:ComponentProps, index) => (
-            <CardGame index={index} name={item.title} background={item.thumbnail} 
+            <CardGame key={index} index={index} name={item.title} background={item.thumbnail} 
             genre={item.genre} platform={item.platform} id={item.id} />
             )): responseAllGames.map((item:ComponentProps, index) => (
-                <CardGame index={index} name={item.title} background={item.thumbnail} 
+                <CardGame key={index} index={index} name={item.title} background={item.thumbnail} 
                 genre={item.genre} platform={item.platform} id={item.id} />))}
 
                 {option.length == 0 && <AiOutlineLoading className='animate-spin text-white text-4xl'/>}

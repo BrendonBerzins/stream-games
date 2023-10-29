@@ -8,6 +8,7 @@ import { BiSolidPencil } from 'react-icons/bi'
 import ContainerAccountInformation from "@/components/layout/settings/ContainerAccountInformation";
 import Succcess from "@/components/layout/settings/flashCards/Success";
 import Head from "next/head";
+import Link from "next/link";
 export default function Settings(){
 
     const [name, setName] = useState('Barlla')
@@ -54,7 +55,7 @@ export default function Settings(){
             to transparency in the processing of personal data of our users/customers.
             Therefore, this Privacy Policy establishes how the 
             collection, use and transfer of information from customers or other people 
-            who access or use our website is carried out. <a className='text-sky-500' href="/">Read More.</a></p>
+            who access or use our website is carried out. <Link className='text-sky-500' href="/">Read More.</Link></p>
             </section>
         </main>
     </>

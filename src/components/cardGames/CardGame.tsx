@@ -1,5 +1,6 @@
 import { BsFillCloudArrowDownFill } from 'react-icons/bs'
 import Link from 'next/link'
+import Image from 'next/image';
 
 type ComponentProps = {
   id?: string;
@@ -16,7 +17,7 @@ export default function CardGame({id, name, background, genre, platform, index}:
         <div className={`w-[250px] h-[300px] rounded-xl overflow-auto bg-[#1b1e25] 
         hover:border hover:border-cyan-500 p-3 transition ease-in scale-[0.9] hover:scale-[1] 
         shadow-xl shadow-black hover:shadow-cyan-500 hover:shadow-md`}>
-            <img className='rounded-xl h-[55%] w-full' src={`${background}`} />
+            <Image alt={''} className='rounded-xl h-[55%] w-full' src={`${background}`} />
             <h1 className='font-bold text-white text-one-line'>{name}</h1>
             <span className='text-[#727071] mt-3'>{platform}</span>
             <div className='flex gap-5 pt-5'>

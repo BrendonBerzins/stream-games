@@ -1,10 +1,11 @@
 import Head from "next/head"
+import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from 'react'
 import { AiOutlineLoading } from "react-icons/ai"
 
-type Requirements = {
+interface Requirements {
         os: string;
         graphics: string;
         memory: string;   
@@ -19,7 +20,7 @@ type GameData = {
     screenshots: Array<Screenshot>;
     thumbnail: string;
     description: string;
-    minimum_system_requirements: Object<Requirements>;
+    minimum_system_requirements: Requirements;
     release_date: string;
     genre: string;
     publisher: string;
@@ -62,23 +63,23 @@ export default function Game() {
                 <section className="flex flex-col md:flex-row w-full text-white overflow-hidden rounded-xl h-full md:w-[90%] md:items-center md:justify-center">
                 <div className="flex flex-col w-full sm:w-[600px] md:w-[70%]">
                     <div className={`w-full h-[250px] md:h-[400px] overflow-hidden`}>
-                    {screen ? <img src={screen} alt={res.title} className={`bg-[#1b1e25]`}/> : <img src={res.screenshots[0].image} alt={res.title} className={`bg-[#1b1e25]`}/>}
+                    {screen ? <Image src={screen} alt={res.title} className={`bg-[#1b1e25]`}/> : <Image src={res.screenshots[0].image} alt={res.title} className={`bg-[#1b1e25]`}/>}
                     </div>
 
                     <div className={`hidden w-[370px] sm:w-full h-[120px] sm:h-[170px] sm:flex gap-3 p-5`}>
                         {res.screenshots.map((img, index) => (
-                            <div onClick={()=>{
+                            <div key={index} onClick={()=>{
                                 setScreen(img.image)
                             }} className={`h-full w-full
                              scale-[0.9] hover:scale-[1] transition ease-in-out cursor-pointer`}>
-                            <img className={`hover:shadow-md hover:shadow-cyan-500 h-full bg-[#1b1e25]`} 
+                            <Image className={`hover:shadow-md hover:shadow-cyan-500 h-full bg-[#1b1e25]`} 
                             key={index} src={img.image} alt={res.title}/>
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className="h-[570px] w-full sm:w-[600px] md:w-[30%] p-5 overflow-y-auto overflow-x-hidden ">
-                    <img src={res.thumbnail} alt={res.title} />
+                    <Image src={res.thumbnail} alt={res.title} />
                     <h1 className=" text-2xl p-5 sm:p-0">{res.title}</h1>
                     <p className="text-five-line mb-5 p-5 sm:p-0">{res.description}</p>
                     <div className="p-5 sm:p-0">

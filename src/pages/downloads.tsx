@@ -3,6 +3,7 @@ import { AiFillDatabase } from 'react-icons/ai'
 import { BsDownload } from 'react-icons/bs'
 import Head from 'next/head';
 import { gamesCompleted } from '@/components/utils/GamesCompleted';
+import Image from 'next/image';
 
 export default function Downloads(){
     return(
@@ -41,7 +42,7 @@ export default function Downloads(){
             <div className={`w-[300px] h-[450px] text-white bg-[#1b1e25]
              flex flex-col md:flex-row md:w-full xl:w-full md:h-[250px] sm:w-full sm:h-[520px] border-t-2 border-t-cyan-500 overflow-hidden`}>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-5">
-                    <img className='md:h-full w-full' src='https://wp-uploads.qualbert.com/2023/03/Resident-Evil-4-Remake-Wallpaper.jpg' alt="r4_remake" />
+                    <Image className='md:h-full w-full' src='https://wp-uploads.qualbert.com/2023/03/Resident-Evil-4-Remake-Wallpaper.jpg' alt="r4_remake" />
                 </div>
                 <section className="flex mr-5 gap-5 items-center">
                 <div className="flex flex-col p-5">
@@ -83,7 +84,7 @@ export default function Downloads(){
                         <span className='text-[#848b94] hidden'>Auto-updates enabled</span>
                     </div>
             <section className='w-[300px] h-[400px] md:h-[200px] md:w-full flex flex-col sm:flex-row sm:gap-5 md:justify-between items-center text-white mt-5'>
-                <img className='w-full md:w-[35%]' src='https://assetsio.reedpopcdn.com/horizon-call-of-the-mountain-preview.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp' alt='diablo4' />
+                <Image className='w-full md:w-[35%]' src='https://assetsio.reedpopcdn.com/horizon-call-of-the-mountain-preview.png?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp' alt='diablo4' />
                 <div>
                     <h1 className='font-bold'>Horizon: Call of the Mountain</h1>
                     <h1>32 GB <span className='text-[#848b94]'>/ 100 GB</span></h1>
@@ -127,7 +128,7 @@ export default function Downloads(){
             {
                 gamesCompleted.map((game, index) => (
                     <section key={index} className='h-[200px] w-full flex flex-col sm:flex-row gap-5 md:justify-between items-center text-white my-20'>
-                <img className='w-full sm:w-[30%]' src={game.imageGameComplete}  alt={game.nameGameComplete} />
+                <Image className='w-full sm:w-[30%]' src={game.imageGameComplete}  alt={game.nameGameComplete} />
                 <div>
                     <h1 className='font-bold'>{game.nameGameComplete}</h1>
                     <h1>{game.totalGigabyte} GB <span className='text-[#848b94]'>/ {game.totalGigabyte} GB</span></h1>

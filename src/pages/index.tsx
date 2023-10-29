@@ -3,6 +3,7 @@ import { useState } from 'react'
 import CardGame from '@/components/cardGames/CardGame'
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 
 type ComponentProps = {
   id?: string;
@@ -68,7 +69,7 @@ export default function Home() {
        <h1 className="text-white text-2xl font-bold mb-10">Popular Games</h1>
        <section className="flex bg-glass w-full h-[270px] items-center rounded-xl overflow-hidden">
         <div className='h-full md:w-[60%]'>
-         <img className='hidden md:block h-full' 
+         <Image alt='' className='hidden md:block h-full' 
          src="https://assetsio.reedpopcdn.com/Resi-Review-Site.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"/>
         </div>
          <section className="flex flex-col justify-center items-center md:w-[40%] p-5">
@@ -89,8 +90,8 @@ export default function Home() {
         <div className='h-[75%] sm:h-[60%] bg-[#282b32] flex text-center items-center justify-center'>
        <section>
          <p className='text-white px-5 md:px-10 text-xl text-news-home blur-none mb-5'>One of the most unexpected reveals for Fortnite was the crossover event with The Witcher.
-           During Chapter 3 Season 4's finale live event, fans could see Roach and Geralt swimming through space.
-           Now that Chapter 4 has officially launched, fans can purchase the battle pass and do Geralt's quests 
+           During Chapter 3 Season 4s finale live event, fans could see Roach and Geralt swimming through space.
+           Now that Chapter 4 has officially launched, fans can purchase the battle pass and do Geralts quests 
            in order to unlock him as a playable skin.</p>
            <Link href='https://www.fortnite.com/?lang=en-US' className='sm:hidden text-white front-bold bg-cyan-500 p-2 rounded-xl'>View More</Link>
        </section>
@@ -102,7 +103,7 @@ export default function Home() {
    <aside className='bg-white w-[90%] md:w-[30%] h-auto p-5 m-5 rounded-xl'>
       <section className='w-full h-full flex flex-col gap-5 items-center justify-center md:items-start md:justify-start'>
         <h1 className='text-2xl pb-5'>Most played</h1>
-        <img src={responseEspecificGame.thumbnail} alt={responseEspecificGame.title} className='bg-slate-300 w-[250px] h-[150px] rounded-md'/>
+        <Image src={responseEspecificGame.thumbnail} alt={responseEspecificGame.title} className='bg-slate-300 w-[250px] h-[150px] rounded-md'/>
         <h2 className='font-bold'>Free Download</h2>
         <p>{responseEspecificGame.short_description}</p>
         <Link href={responseEspecificGame.game_url.length == 0 ? '' : responseEspecificGame.game_url } className={`flex justify-center bg-cyan-500 p-2 rounded-md scale-[0.9] transition ease-in 
@@ -122,7 +123,7 @@ export default function Home() {
     <h1 className="text-white text-2xl font-bold mb-10">Top most played</h1>
     <section className='flex flex-wrap items-center justify-center'>
     {responseGame.map((game:ComponentProps, index:number)=> (
-      <CardGame id={game.id} name={game.title} 
+      <CardGame key={index} id={game.id} name={game.title} 
       background={game.thumbnail} genre={game.genre} 
       platform={game.platform} index={index} />
     ))}
