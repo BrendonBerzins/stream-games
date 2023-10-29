@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+* {
+    scroll-behavior: smooth;
+}
 .navLinkIcons {
     @apply flex gap-3 items-center
 }
@@ -26,12 +28,26 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical; 
 }
+.text-news-home {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical; 
+}
 
 .text-one-line {
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+}
+.text-five-line {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical; 
 }
 
@@ -41,4 +57,58 @@
     background-size: cover;
     background-position: center;
 }
+.bg-gradientGameProfile {
+    background-image: linear-gradient(30deg, rgba(30,30,30,1) 50%, rgba(0,0,0,0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.settingsName {
+    max-width: 20ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.success {
+    animation: success-animated normal 0.1s linear;
+}
+
+@keyframes success-animated {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.bg-imageGameProfile {
+        animation: bg-info-card infinite 30s linear;
+    }
+
+@keyframes bg-info-card {
+    0%{
+        background-size: 140%;
+    }
+    50%{
+        background-size: 200%;
+    }
+    100%{
+        background-size: 140%;
+    }
+}
+
+.transition-sidebar {
+    animation: animated-sidebar normal 0.1s linear;
+}
+
+@keyframes animated-sidebar {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

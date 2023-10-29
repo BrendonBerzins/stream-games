@@ -1,17 +1,38 @@
-export default function ProfileCard({color, name}:any){
+import {BsStars, BsFillTrophyFill} from 'react-icons/bs'
+import { FaFireAlt } from 'react-icons/fa'
+
+export default function ProfileCard({ name}:any){
     return(
-        <section className="flex bg-white flex-col gap-5 w-[300px] h-[200px] pb-3 rounded-xl overflow-hidden">
-        <div style={{backgroundColor:color}}className={`w-full h-20 z-0`}></div>
-        <div className="flex flex-col z-10">
-        <img className="rounded-full h-24 w-24 fixed top-7 ml-3 bg-white p-1" src="https://i.pinimg.com/1200x/51/f5/2a/51f52acb35f7b47e069ce027682475b2.jpg" alt="profile-icon" />
-        <div className="flex p-5 items-center gap-5">
-        <section>
-        <h1 className="font-bold text-xl">{name}</h1>
-        <p className="text-[#222]">{name}#3897</p>
+        <section style={{backgroundImage: `url('https://e0.pxfuel.com/wallpapers/786/398/desktop-wallpaper-diablo-iv-in.jpg')`, 
+        backgroundSize: 'cover', backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+    }}className="flex flex-col gap-5 text-white w-[300px] h-[250px] items-center justify-center rounded-xl overflow-hidden">
+        <div className="flex flex-col justify-center items-center w-[300px] h-full">
+            <div className="h-[65%] w-[300px] flex items-center justify-center">
+                <img className="mb-3 rounded-full h-24 w-24 p-1 bg-white" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
+            </div>
+        <div className="flex p-5 items-center justify-center gap-5 w-[300px] bg-[#1b1e25] h-[35%]">
+        <section className="flex w-[300px] justify-between">
+            <div>
+        <h1 className="font-bold text-xl settingsName">{name.length == 0 ? 'Barlla' : name}</h1>
+        <p className="font-bold settingsName">{name.length == 0 ? 'Barlla' : name}#3897</p>
+            </div>
+            <div>
+            <span className='flex items-center'>
+                    <BsStars />
+                   <p>2190 XP</p> 
+                    </span>
+                    <span className='flex items-center'>
+                    <BsFillTrophyFill />
+                   <p>115</p> 
+                   </span>
+                   <span className='flex items-center'>
+                    <FaFireAlt />
+                   <p>286</p> 
+                    </span>
+            </div>
         </section>
-        <div className="bg-[#2e2c2d] mt-5 text-white rounded-xl justify-center items-center w-32 h-6 px-2">
-        <span>✨ Game Pound</span>
-        </div>
+
         </div>
         </div>
         </section>

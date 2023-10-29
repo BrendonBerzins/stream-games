@@ -1,10 +1,16 @@
+import Head from "next/head";
+
 export default function Community(){
     return(
+        <>
+    <Head>
+      <title>Community</title>
+    </Head>
         <main className="w-full h-full">
             <h1 className="text-white text-2xl p-10">News</h1>
-            <section className="flex w-[80%] ml-10">
-                <img className='w-[50%]' src='https://i0.wp.com/www.nintendo-town.fr/wp-content/uploads/2020/05/UnrealEngine_blog_connect-with-the-unreal-engine-community-online_UE_Community_Online_Feed-thumb-desktop-1400x788-a6917dba2f2c.png?fit=1400%2C788&ssl=1' alt='unreal_img' />
-                <div className="bg-[#272526] w-[50%] p-10">
+            <section className="flex flex-col w-[350px] bg-[#272526] md:flex-row sm:w-[500px] items-center justify-center md:w-[80%] sm:ml-10">
+                <img className='w-full md:w-[50%]' src='https://i0.wp.com/www.nintendo-town.fr/wp-content/uploads/2020/05/UnrealEngine_blog_connect-with-the-unreal-engine-community-online_UE_Community_Online_Feed-thumb-desktop-1400x788-a6917dba2f2c.png?fit=1400%2C788&ssl=1' alt='unreal_img' />
+                <div className="w-full md:w-[50%] p-10">
                     <h1 className="text-white text-2xl">Connect with the Unreal Engine community online</h1>
                     <p className="text-[#727071]">Although many physical events 
                     around the world are on hold, there are plenty of places to connect 
@@ -12,8 +18,8 @@ export default function Community(){
                     livestreams and full-on virtual events, our community of creators is continually staying active.</p>
                 </div>
             </section>
-            <section className="flex w-full gap-5 mt-10 p-5">
-                <section className="w-[70%] h-full">
+            <section className="flex flex-col md:flex-row w-full gap-5 mt-10 p-5">
+                <section className="w-[300px] sm:w-[500px] md:w-full h-full">
                     <h1 className="text-2xl text-white mb-5">Featured content</h1>
                     <hr className="w-full border-[#1f1f1f] border-2"/>
                     <div className="flex flex-wrap justify-center items-center gap-5 mt-5">
@@ -59,7 +65,7 @@ export default function Community(){
                 </section>
                     </div>
                 </section>
-                <aside className="w-[30%] h-screen">
+                <aside className="w-[300px] md:w-[400px] h-screen">
                <h1 className="text-2xl text-white mb-5">Featured Screenshot</h1>
                 <hr className="w-full border-[#1f1f1f] border-2"/>
                 <div className="flex flex-col justify-center mt-5 gap-5">
@@ -85,5 +91,6 @@ export default function Community(){
                 </aside>
             </section>
         </main>
+        </>
     )
 }

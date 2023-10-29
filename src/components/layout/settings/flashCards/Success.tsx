@@ -16,7 +16,7 @@ export default function Succcess({msg}:any){
     return(
         <>
         {visible && (
-            <section className="text-white absolute flex justify-center items-center gap-5 bg-green-500 w-[30%] p-5">
+            <section className="success text-white absolute flex justify-center items-center gap-5 bg-green-500 w-[300px] sm:w-[500px] p-5">
             <h1 className="font-bold">Change made successfully</h1>
             <AiFillCheckCircle className='text-4xl'/>
             </section>
