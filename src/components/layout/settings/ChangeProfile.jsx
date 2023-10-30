@@ -9,7 +9,7 @@ export default function ChangeProfile() {
         <section className="flex gap-10 mt-10">
         <section className="flex flex-col justify-center items-center">
         <h1 className="font-bold text-[#9f9f9f] mb-5">Change Picture</h1>
-        <Image className="rounded-full h-20 w-20" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
+        <Image height={80} width={80} className="rounded-full h-20 w-20" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
         </section>
         </section>
         </section>

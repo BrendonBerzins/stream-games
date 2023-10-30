@@ -68,11 +68,11 @@ export default function Home() {
     <section className="p-5 ">
        <h1 className="text-white text-2xl font-bold mb-10">Popular Games</h1>
        <section className="flex bg-glass w-full h-[270px] items-center rounded-xl overflow-hidden">
-        <div className='h-full md:w-[60%]'>
-         <Image alt='' className='hidden md:block h-full' 
+        <div className='h-full md:w-[55%]'>
+         <Image height={300} width={600} alt='' className='hidden md:block h-full' 
          src="https://assetsio.reedpopcdn.com/Resi-Review-Site.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"/>
         </div>
-         <section className="flex flex-col justify-center items-center md:w-[40%] p-5">
+         <section className="flex flex-col justify-center items-center md:w-[45%] p-5">
            <h1 className='text-white font-bold text-xl'>Resident Evil 4 remake</h1>
            <p className='text-[#adacaf] p-5 text-five-line'>Reimagined for 2023 to bring state-of-the-art survival horror.
            Resident Evil 4 preserves the essence of the original game, while introducing modernized gameplay,
@@ -103,7 +103,7 @@ export default function Home() {
    <aside className='bg-white w-[90%] md:w-[30%] h-auto p-5 m-5 rounded-xl'>
       <section className='w-full h-full flex flex-col gap-5 items-center justify-center md:items-start md:justify-start'>
         <h1 className='text-2xl pb-5'>Most played</h1>
-        <Image src={responseEspecificGame.thumbnail} alt={responseEspecificGame.title} className='bg-slate-300 w-[250px] h-[150px] rounded-md'/>
+        <Image height={200} width={300} src={responseEspecificGame.thumbnail} alt={responseEspecificGame.title} className='bg-slate-300 w-[250px] h-[150px] rounded-md'/>
         <h2 className='font-bold'>Free Download</h2>
         <p>{responseEspecificGame.short_description}</p>
         <Link href={responseEspecificGame.game_url.length == 0 ? '' : responseEspecificGame.game_url } className={`flex justify-center bg-cyan-500 p-2 rounded-md scale-[0.9] transition ease-in 

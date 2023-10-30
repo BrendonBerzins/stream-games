@@ -21,7 +21,7 @@ export default function Friends(){
         shadow-black shadow-2xl 
         border-b border-b-[#545761] h-[10%] w-full gap-5 text-white`}>
             <div className='flex gap-3 items-center'>
-                <Image className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                <Image height={40} width={40} className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
                 <h1 className='text-xl'>{favoriteFriendsList[0].useName}</h1>
                 <div className='h-3 w-3 rounded-full bg-green-500'></div>
             </div>
@@ -45,7 +45,7 @@ export default function Friends(){
         <section className={`flex flex-col justify-center items-center
         text-white gap-5 w-full h-[90%]`}>
             <div className='flex gap-5'>
-                <Image className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                <Image height={80} width={80} className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
                 <div>
                     <h1 className="text-2xl">{favoriteFriendsList[0].useName}</h1>
                     <h1>{favoriteFriendsList[0].description}</h1>
@@ -67,7 +67,7 @@ export default function Friends(){
              <aside className="bg-[#1b1e25] border-l border-l-[#282b34] h-full w-full shadow-lg shadow-black transition duration-200 overflow-auto scroll-smooth fixed">
              <div className="flex w-full p-5 gap-5">
              <div>
-             <Image className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
+             <Image height={48} width={48} className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
              <div className="bg-[#1b1e25] w-5 h-5 rounded-full relative bottom-4 left-7 flex items-center justify-center">
              <div className="bg-green-500 w-3 h-3 rounded-full"></div>
              </div>
@@ -96,7 +96,7 @@ export default function Friends(){
                          shadow-black shadow-2xl 
                          border-b border-b-[#545761] h-[10%] w-full gap-5 text-white`}>
                              <div className='flex gap-3 items-center'>
-                                 <Image className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                                 <Image height={40} width={40} className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
                                  <h1 className='text-xl'>{favoriteFriendsList[0].useName}</h1>
                                  <div className='h-3 w-3 rounded-full bg-green-500'></div>
                              </div>
@@ -120,7 +120,7 @@ export default function Friends(){
                          <section className={`flex flex-col justify-center items-center
                          text-white gap-5 w-full h-[90%]`}>
                              <div className='flex gap-5'>
-                                 <Image className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                                 <Image height={80} width={80} className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
                                  <div>
                                      <h1 className='text-2xl'>{favoriteFriendsList[0].useName}</h1>
                                      <h1>{favoriteFriendsList[0].description}</h1>
@@ -134,7 +134,7 @@ export default function Friends(){
                      )
                          }
                      } className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
-                     <Image className="rounded-full h-12 w-12" src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName}/>
+                     <Image height={48} width={48} className="rounded-full h-12 w-12" src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName}/>
                      <div>
                          <p className="text-[#697c8a] font-bold">{favoriteFriendsList[0].useName}</p>
                          <p className='text-[#b4b6bb]'>{favoriteFriendsList[0].description}</p>
@@ -155,7 +155,7 @@ export default function Friends(){
                                  shadow-black shadow-2xl 
                                  border-b border-b-[#545761] h-[10%] w-full gap-5 text-white`}>
                                      <div className='flex gap-3 items-center'>
-                                         <Image className={`h-10 w-10 rounded-full`} src={info.imageProfile} alt={info.useName} />
+                                         <Image height={40} width={40} className={`h-10 w-10 rounded-full`} src={info.imageProfile} alt={info.useName} />
                                          <h1 className='text-xl'>{info.useName}</h1>
                                          <div className='h-3 w-3 rounded-full bg-green-500'></div>
                                      </div>
@@ -179,7 +179,7 @@ export default function Friends(){
                                  <section className={`flex flex-col justify-center items-center
                                  text-white gap-5 w-full h-[90%]`}>
                                      <div className='flex gap-5'>
-                                         <Image className={`h-20 w-20 rounded-full`} src={info.imageProfile} alt={info.useName} />
+                                         <Image height={80} width={80} className={`h-20 w-20 rounded-full`} src={info.imageProfile} alt={info.useName} />
                                          <div>
                                              <h1 className='text-2xl'>{info.useName}</h1>
                                              <h1>{info.description}</h1>
@@ -193,7 +193,7 @@ export default function Friends(){
                                  </div>
                              
                              )}} key={index} className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
-                             <Image className="rounded-full h-12 w-12" src={info.imageProfile} alt={info.useName}/>
+                             <Image height={48} width={48} className="rounded-full h-12 w-12" src={info.imageProfile} alt={info.useName}/>
                              <div>
                              <p className="text-[#697c8a] font-bold">{info.useName}</p>
                              <p className='text-[#b4b6bb]'>{info.description}</p>
@@ -237,7 +237,7 @@ export default function Friends(){
         <aside className="overflow-x-hidden bg-[#1b1e25] border-l border-l-[#282b34] h-full w-[30%] shadow-lg shadow-black transition duration-200 overflow-auto scroll-smooth hidden md:flex md:flex-col">
             <div className="flex w-full p-5 gap-5">
             <div>
-            <Image className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
+            <Image height={48} width={48} className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
             <div className="bg-[#1b1e25] w-5 h-5 rounded-full relative bottom-4 left-7 flex items-center justify-center">
             <div className="bg-green-500 w-3 h-3 rounded-full"></div>
             </div>
@@ -264,7 +264,7 @@ export default function Friends(){
                         shadow-black shadow-2xl 
                         border-b border-b-[#545761] h-[10%] w-full gap-5 text-white`}>
                             <div className='flex gap-3 items-center'>
-                                <Image className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                                <Image height={40} width={40} className={`h-10 w-10 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
                                 <h1 className='text-xl'>{favoriteFriendsList[0].useName}</h1>
                                 <div className='h-3 w-3 rounded-full bg-green-500'></div>
                             </div>
@@ -288,7 +288,7 @@ export default function Friends(){
                         <section className={`flex flex-col justify-center items-center
                         text-white gap-5 w-full h-[90%]`}>
                             <div className='flex gap-5'>
-                                <Image className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
+                                <Image height={80} width={80} className={`h-20 w-20 rounded-full`} src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName} />
 
                                 <div>
                                     <h1 className='text-2xl'>{favoriteFriendsList[0].useName}</h1>
@@ -301,7 +301,7 @@ export default function Friends(){
                         </div>
                     
                     )} className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
-                        <Image className="rounded-full h-12 w-12" src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName}/>
+                        <Image height={48} width={48} className="rounded-full h-12 w-12" src={favoriteFriendsList[0].imageProfile} alt={favoriteFriendsList[0].useName}/>
 
                         <div>
                         <p className="text-[#697c8a] font-bold">{favoriteFriendsList[0].useName}</p>
@@ -321,7 +321,7 @@ export default function Friends(){
                                 shadow-black shadow-2xl
                                 border-b border-b-[#545761] h-[10%] w-full gap-5 text-white`}>
                                     <div className='flex gap-3 items-center'>
-                                        <Image className={`h-10 w-10 rounded-full`} src={info.imageProfile} alt={info.useName} />
+                                        <Image height={40} width={40} className={`h-10 w-10 rounded-full`} src={info.imageProfile} alt={info.useName} />
                                         <h1 className='text-xl'>{info.useName}</h1>
                                         <div className='h-3 w-3 rounded-full bg-green-500'></div>
                                     </div>
@@ -345,7 +345,7 @@ export default function Friends(){
                                 <section className={`flex flex-col justify-center items-center
                                 text-white gap-5 w-full h-[90%]`}>
                                     <div className='flex gap-5'>
-                                        <Image className={`h-20 w-20 rounded-full`} src={info.imageProfile} alt={info.useName} />
+                                        <Image height={80} width={80} className={`h-20 w-20 rounded-full`} src={info.imageProfile} alt={info.useName} />
                                         <div>
                                             <h1 className='text-2xl'>{info.useName}</h1>
                                             <h1>{info.description}</h1>
@@ -359,7 +359,7 @@ export default function Friends(){
                                 </div>
                             
                             )} key={index} className='flex p-3 gap-3 hover:bg-[#282b32] transition ease-in-out duration-500 cursor-pointer'>
-                            <Image className="rounded-full h-12 w-12" src={info.imageProfile} alt={info.useName}/>
+                            <Image height={48} width={48} className="rounded-full h-12 w-12" src={info.imageProfile} alt={info.useName}/>
                             <div>
                             <p className="text-[#697c8a] font-bold">{info.useName}</p>
                             <p className='text-[#b4b6bb]'>{info.description}</p>

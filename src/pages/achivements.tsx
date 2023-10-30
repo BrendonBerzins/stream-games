@@ -11,7 +11,7 @@ export default function Achivements(){
         <div>
             <h1 className='my-5 text-2xl pl-5'>{games[2].nameGame}</h1>
             <div className='p-5'>
-                <Image className='w-full rounded-md' src={games[2].imageGame} alt={games[2].nameGame}/>
+                <Image width={800} height={800} className='w-full rounded-md' src={games[2].imageGame} alt={games[2].nameGame}/>
             </div>
             <div className='p-5 flex flex-col gap-5'>
                 <div>
@@ -73,7 +73,7 @@ export default function Achivements(){
                         <div>
                         <h1 className='my-5 text-2xl pl-5'>{game.nameGame}</h1>
                         <div className='p-5'>
-                        <Image className='w-full rounded-md' src={game.imageGame} alt={game.nameGame}/>
+                        <Image height={500} width={500} className='w-full rounded-md' src={game.imageGame} alt={game.nameGame}/>
                         </div>
                         <div className='p-5 flex flex-col gap-5'>
                         <div>
@@ -98,7 +98,7 @@ export default function Achivements(){
                 }} className={`cursor-pointer w-[300px] md:w-[500px] bg-[#272526] h-[400px] md:h-[450px] xl:h-[200px] flex flex-col xl:flex-row xl:w-[800px]
                 hover:border hover:border-cyan-500 transition ease-in scale-[0.9] hover:scale-[1] 
         shadow-xl shadow-black hover:shadow-cyan-500 hover:shadow-md`}>
-                    <Image className='w-[100%] xl:w-[40%]' src={game.imageGame} alt={game.nameGame} />
+                    <Image height={500} width={500} className='w-[100%] xl:w-[40%]' src={game.imageGame} alt={game.nameGame} />
                     <div className='text-white flex flex-col justify-center items-center w-full p-10'>
                          <section className='flex flex-col sm:flex-row gap-5'>
                             <div>

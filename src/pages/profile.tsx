@@ -48,7 +48,7 @@ export default function Profile(){
         <main className="h-full w-full flex flex-col">
             <div className={styles.bgImage}>
                 <div className='flex items-center gap-5 h-[300px]'>
-                    <Image className="rounded-full h-36 w-3h-36 ml-3 bg-white p-1 shadow-xl shadow-black" 
+                    <Image height={144} width={144} className="rounded-full h-36 w-36 ml-3 bg-white p-1 shadow-xl shadow-black" 
                     src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" 
                     alt="profile-icon" />
                         <section className="flex flex-col text-white">
@@ -125,7 +125,7 @@ export default function Profile(){
                                     cursor-pointer bg-[#272526] 
                                     hover:border hover:border-cyan-500 transition ease-in hover:-translate-y-5 
                                     shadow-xl shadow-black hover:shadow-cyan-500 hover:shadow-md`}>
-                                        <Image alt='' className='h-full w-full' src={game.imageGame} />
+                                        <Image height={250} width={250} alt='' className='h-full w-full' src={game.imageGame} />
                                     </div>
                                     <div className='flex flex-col gap-2 mt-3'>
                                         <h1 className='text-white'>{game.nameGame}</h1>

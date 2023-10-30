@@ -17,7 +17,7 @@ export default function Sidebar() {
             <nav className="h-full w-[100%] flex flex-col">
             <div className="p-4 pb-2 flex justify-center items-center">
                 <div className="flex gap-3">
-                <Image className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
+                <Image width={48} height={48} className="rounded-full h-12 w-12" src="https://assets.moxfield.net/profile/profile-5994-81598eaa-48df-40f2-ac4b-b5fce005dd7e" alt="profile-icon" />
                 <div className="text-white flex flex-col justify-center items-center">
                 <h1 className="font-bold text-md">Barlla</h1>
                 <p>258,30$</p>
@@ -46,10 +46,10 @@ export default function Sidebar() {
             </ul>
             <h2 className="text-white text-md font-bold my-2">MESSAGES</h2>
             <Link onClick={() => setShowSidebar(false)} href={'/friends'} className="flex gap-2">
-                <Image className="rounded-full h-8 w-8 cursor-pointer" src="https://p2.trrsf.com/image/fget/cf/600/600/images.terra.com/2022/10/03/overwatch-2-cover-qhsw1srgxh6h.png" alt="profile-icon" />
-                <Image className="rounded-full h-8 w-8 cursor-pointer" src="https://i.pinimg.com/280x280_RS/eb/f2/aa/ebf2aafd74920b9f15b605476814ec7f.jpg" alt="profile-icon" />
-                <Image className="rounded-full h-8 w-8 cursor-pointer" src="https://avatarfiles.alphacoders.com/916/91642.jpg" alt="profile-icon" />
-                <Image className="rounded-full h-8 w-8 cursor-pointer" src="https://i.pinimg.com/736x/1a/8c/5a/1a8c5adb2405a2e9d4172e8c97d62cc3.jpg" alt="profile-icon" />
+                <Image height={32} width={32} className="rounded-full h-8 w-8 cursor-pointer" src="https://p2.trrsf.com/image/fget/cf/600/600/images.terra.com/2022/10/03/overwatch-2-cover-qhsw1srgxh6h.png" alt="profile-icon" />
+                <Image height={32} width={32} className="rounded-full h-8 w-8 cursor-pointer" src="https://i.pinimg.com/280x280_RS/eb/f2/aa/ebf2aafd74920b9f15b605476814ec7f.jpg" alt="profile-icon" />
+                <Image height={32} width={32} className="rounded-full h-8 w-8 cursor-pointer" src="https://avatarfiles.alphacoders.com/916/91642.jpg" alt="profile-icon" />
+                <Image height={32} width={32} className="rounded-full h-8 w-8 cursor-pointer" src="https://i.pinimg.com/736x/1a/8c/5a/1a8c5adb2405a2e9d4172e8c97d62cc3.jpg" alt="profile-icon" />
             </Link>
             </div>
             </nav>
